@@ -1,0 +1,6 @@
+// Remove or update any custom distDir setting:
+module.exports = {
+  // ...other config...
+  // distDir: "src/app/.next", // <-- REMOVE THIS LINE if present
+  // ...other config...
+};

@@ -7,7 +7,7 @@ export default function Home() {
           <input
             type="text"
             placeholder="Search for gear..."
-            className="flex-grow p-3 rounded-l-md text-black"
+            className="flex-grow p-3 rounded-l-md text-black border border-gray-300"
           />
           <button className="bg-green-700 hover:bg-green-800 px-4 py-3 rounded-r-md font-semibold">
             FIND YOUR GEAR

@@ -265,8 +265,13 @@ export default function QuizPage() {
     return (
       <div className="min-h-screen" style={{ background: "#0A0F0A" }}>
         {/* Header */}
-        <div className="pt-24 pb-8 px-4 sm:px-6 text-center"
-          style={{ background: "linear-gradient(180deg, #0C1A0C 0%, #0A0F0A 100%)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="pt-24 pb-8 px-4 sm:px-6 text-center relative overflow-hidden"
+          style={{
+            background: `linear-gradient(180deg, rgba(5,10,5,0.65) 0%, rgba(10,15,10,0.98) 100%), url('/forest-mist.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+            borderBottom: "1px solid rgba(255,255,255,0.05)",
+          }}>
           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
             style={{ background: "linear-gradient(135deg, #C45A1A, #E8763A)" }}>
             <Target size={28} color="white" />

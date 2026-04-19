@@ -59,9 +59,11 @@ export default function OutfittersPage() {
 
       {/* Page header */}
       <div
-        className="pt-24 pb-10 px-4 sm:px-6"
+        className="pt-24 pb-10 px-4 sm:px-6 relative overflow-hidden"
         style={{
-          background: "linear-gradient(180deg, #0C1A0C 0%, #0A0F0A 100%)",
+          background: `linear-gradient(180deg, rgba(5,10,5,0.6) 0%, rgba(10,15,10,0.98) 100%), url('/plains.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 60%",
           borderBottom: "1px solid rgba(255,255,255,0.05)",
         }}
       >

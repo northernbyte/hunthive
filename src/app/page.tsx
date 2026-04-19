@@ -116,27 +116,20 @@ export default function HomePage() {
         className="relative min-h-screen flex flex-col justify-end pb-24 pt-28 overflow-hidden"
         style={{
           background: `
-            radial-gradient(ellipse at 20% 50%, rgba(28,58,20,0.6) 0%, transparent 60%),
-            radial-gradient(ellipse at 80% 20%, rgba(196,90,26,0.08) 0%, transparent 50%),
             linear-gradient(180deg,
-              rgba(10,15,10,0.2) 0%,
-              rgba(10,15,10,0.6) 60%,
-              rgba(10,15,10,0.95) 100%
+              rgba(5,10,5,0.35) 0%,
+              rgba(5,10,5,0.55) 55%,
+              rgba(5,10,5,0.97) 100%
             ),
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%230A1A08' width='800' height='600'/%3E%3Cellipse cx='400' cy='400' rx='400' ry='200' fill='%23162810'/%3E%3Cpath d='M0,600 L0,350 Q100,200 200,280 Q300,150 400,200 Q500,120 600,180 Q700,100 800,160 L800,600 Z' fill='%231C3A14'/%3E%3Cpath d='M0,600 L0,400 Q80,300 160,360 Q240,240 320,300 Q400,200 480,280 Q560,180 640,240 Q720,160 800,220 L800,600 Z' fill='%23142E0E'/%3E%3Cpath d='M0,600 L0,440 L40,420 L40,380 L60,380 L60,340 L80,340 L80,360 L100,360 L100,300 L120,300 L120,330 L140,330 L140,310 L160,310 L160,350 L180,350 L180,320 L200,320 L200,360 L230,360 L230,290 L250,290 L250,260 L270,260 L270,290 L290,290 L290,310 L310,310 L310,280 L330,280 L330,320 L350,320 L350,300 L370,300 L370,260 L390,260 L390,240 L410,240 L410,260 L430,260 L430,300 L450,300 L450,330 L470,330 L470,290 L490,290 L490,310 L510,310 L510,350 L530,350 L530,320 L550,320 L550,360 L570,360 L570,300 L590,300 L590,280 L610,280 L610,310 L630,310 L630,340 L650,340 L650,370 L670,370 L670,380 L700,380 L700,400 L720,400 L720,420 L760,420 L760,440 L800,440 L800,600 Z' fill='%230C1E0A'/%3E%3C/svg%3E")
+            radial-gradient(ellipse at 20% 60%, rgba(28,58,20,0.45) 0%, transparent 55%),
+            url('/hero-mountains.jpg')
           `,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center 30%",
         }}
       >
-        {/* Subtle grid overlay */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.3) 60px, rgba(255,255,255,0.3) 61px),
-              repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.3) 60px, rgba(255,255,255,0.3) 61px)`,
-          }}
-        />
+        {/* Vignette */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(5,10,5,0.5) 100%)" }} />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
           {/* Badge */}
@@ -541,15 +534,17 @@ export default function HomePage() {
           <div
             className="rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden"
             style={{
-              background: "linear-gradient(135deg, #1C3A14 0%, #2A5420 50%, #1C3A14 100%)",
+              background: `linear-gradient(135deg, rgba(10,20,8,0.88) 0%, rgba(28,58,20,0.82) 50%, rgba(10,20,8,0.88) 100%), url('/forest-mist.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
               border: "1px solid rgba(196,90,26,0.25)",
             }}
           >
             <div
-              className="absolute inset-0 opacity-10"
+              className="absolute inset-0 opacity-30"
               style={{
                 background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(196,90,26,0.8) 0%, transparent 70%)",
+                  "radial-gradient(ellipse at 50% 0%, rgba(196,90,26,0.6) 0%, transparent 70%)",
               }}
             />
             <div className="relative z-10">
@@ -562,10 +557,11 @@ export default function HomePage() {
                 thousands of motivated hunters across North America.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="btn-orange px-8 py-4 text-base rounded-xl w-full sm:w-auto">
+                <Link href="/list" className="btn-orange px-8 py-4 text-base rounded-xl w-full sm:w-auto">
                   <span>List Your Hunts — Free</span>
-                </button>
-                <button
+                </Link>
+                <Link
+                  href="/outfitters"
                   className="px-8 py-4 text-base rounded-xl w-full sm:w-auto font-semibold transition-colors"
                   style={{
                     background: "rgba(255,255,255,0.08)",
@@ -574,7 +570,7 @@ export default function HomePage() {
                   }}
                 >
                   Learn More
-                </button>
+                </Link>
               </div>
               <p className="text-xs mt-6" style={{ color: "#5A7A4A" }}>
                 No commission on your first 5 bookings · Setup in under 10 minutes

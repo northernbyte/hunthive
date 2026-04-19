@@ -657,8 +657,13 @@ export default function GearPage() {
 
       {/* Page header */}
       <div
-        className="pt-24 pb-8 px-4 sm:px-6"
-        style={{ background: "linear-gradient(180deg, #0C1A0C 0%, #0A0F0A 100%)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+        className="pt-24 pb-8 px-4 sm:px-6 relative overflow-hidden"
+        style={{
+          background: `linear-gradient(180deg, rgba(5,10,5,0.65) 0%, rgba(10,15,10,0.98) 100%), url('/hero-forest.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 35%",
+          borderBottom: "1px solid rgba(255,255,255,0.05)",
+        }}
       >
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold mb-2 tracking-widest uppercase" style={{ color: "#E8763A" }}>

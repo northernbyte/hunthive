@@ -282,11 +282,11 @@ export default function OutfitterProfilePage({ params }: { params: Promise<{ id:
         className="relative h-72 sm:h-96 flex items-end"
         style={{
           background: `
-            linear-gradient(180deg, rgba(10,15,10,0.2) 0%, rgba(10,15,10,0.9) 100%),
-            linear-gradient(135deg,
-              hsl(${(parseInt(outfitter.id) * 37) % 60 + 100}, 45%, 10%) 0%,
-              hsl(${(parseInt(outfitter.id) * 37) % 60 + 110}, 55%, 18%) 100%)
+            linear-gradient(180deg, rgba(5,10,5,0.25) 0%, rgba(5,10,5,0.92) 100%),
+            url('/mountains-2.jpg')
           `,
+          backgroundSize: "cover",
+          backgroundPosition: "center 40%",
         }}
       >
         {/* Tree silhouette decoration */}

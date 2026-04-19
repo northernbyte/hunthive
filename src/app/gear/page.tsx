@@ -298,13 +298,16 @@ function GearModal({ item, onClose }: { item: GearItem; onClose: () => void }) {
 
               <div className="space-y-2">
                 {[...item.retailers].sort((a, b) => a.price - b.price).map((r, i) => (
-                  <button
+                  <a
                     key={r.name}
-                    disabled={!r.inStock}
-                    className="w-full flex items-center gap-3 p-3 rounded-xl transition-all text-left disabled:opacity-40"
+                    href={r.inStock ? r.url : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all text-left ${!r.inStock ? "opacity-40 pointer-events-none" : "hover:brightness-110"}`}
                     style={{
                       background: i === 0 ? "rgba(74,222,128,0.07)" : "rgba(255,255,255,0.03)",
                       border: `1px solid ${i === 0 ? "rgba(74,222,128,0.15)" : "rgba(255,255,255,0.06)"}`,
+                      textDecoration: "none",
                     }}
                   >
                     <div
@@ -329,7 +332,7 @@ function GearModal({ item, onClose }: { item: GearItem; onClose: () => void }) {
                       )}
                     </div>
                     <ExternalLink size={14} style={{ color: "#4A4A3A" }} />
-                  </button>
+                  </a>
                 ))}
               </div>
 
@@ -372,12 +375,18 @@ function GearModal({ item, onClose }: { item: GearItem; onClose: () => void }) {
         <div className="sticky bottom-0 px-6 pb-6 pt-4"
           style={{ background: "#111811", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="flex gap-3">
-            <button className="btn-orange flex-1 py-3.5 rounded-xl flex items-center justify-center gap-2">
+            <a
+              href={[...item.retailers].sort((a, b) => a.price - b.price).find(r => r.inStock)?.url ?? item.retailers[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-orange flex-1 py-3.5 rounded-xl flex items-center justify-center gap-2"
+              style={{ textDecoration: "none" }}
+            >
               <span className="flex items-center gap-2">
                 <ShoppingCart size={16} />
                 Buy for ${item.lowestPrice} →
               </span>
-            </button>
+            </a>
             <button
               className="w-12 h-12 rounded-xl flex items-center justify-center transition-colors"
               style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", color: "#8A8A7A" }}

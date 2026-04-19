@@ -18,9 +18,9 @@ export interface PricePoint {
 export interface RetailerPrice {
   name: string;
   price: number;
-  url: string;
+  url: string; // Replace with your affiliate link when available
   inStock: boolean;
-  logo: string; // initials for now
+  logo: string;
 }
 
 export interface GearItem {
@@ -28,7 +28,7 @@ export interface GearItem {
   name: string;
   brand: string;
   category: GearCategory;
-  image: string; // emoji placeholder
+  image: string;
   rating: number;
   reviewCount: number;
   description: string;
@@ -67,11 +67,11 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 1049 },
     ],
     retailers: [
-      { name: "Bass Pro Shops", price: 1049, url: "#", inStock: true, logo: "BPS" },
-      { name: "Cabela's", price: 1079, url: "#", inStock: true, logo: "CAB" },
-      { name: "MidwayUSA", price: 1099, url: "#", inStock: true, logo: "MID" },
-      { name: "Sportsman's Whs.", price: 1129, url: "#", inStock: false, logo: "SWH" },
-      { name: "GunBroker", price: 1199, url: "#", inStock: true, logo: "GB" },
+      { name: "Bass Pro Shops", price: 1049, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=browning+x-bolt+speed", inStock: true, logo: "BPS" },
+      { name: "Cabela's", price: 1079, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=browning+x-bolt+speed", inStock: true, logo: "CAB" },
+      { name: "MidwayUSA", price: 1099, url: "https://www.midwayusa.com/find?userSearchTerm=browning+x-bolt+speed", inStock: true, logo: "MID" },
+      { name: "Sportsman's Whs.", price: 1129, url: "https://www.sportsmanswarehouse.com/search?q=browning+x-bolt+speed", inStock: false, logo: "SWH" },
+      { name: "GunBroker", price: 1199, url: "https://www.gunbroker.com/All/search?Keywords=browning+x-bolt+speed", inStock: true, logo: "GB" },
     ],
     specs: {
       Caliber: "6.5 Creedmoor / .308 Win / .300 Win Mag",
@@ -108,11 +108,11 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 979 },
     ],
     retailers: [
-      { name: "Cabela's", price: 979, url: "#", inStock: true, logo: "CAB" },
-      { name: "OpticsPlanet", price: 999, url: "#", inStock: true, logo: "OPP" },
-      { name: "Bass Pro Shops", price: 1049, url: "#", inStock: true, logo: "BPS" },
-      { name: "MidwayUSA", price: 1079, url: "#", inStock: true, logo: "MID" },
-      { name: "EuroOptic", price: 1099, url: "#", inStock: false, logo: "EUR" },
+      { name: "Cabela's", price: 979, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=leupold+vx-5hd+3-15x44", inStock: true, logo: "CAB" },
+      { name: "OpticsPlanet", price: 999, url: "https://www.opticsplanet.com/search?q=leupold+vx-5hd+3-15x44", inStock: true, logo: "OPP" },
+      { name: "Bass Pro Shops", price: 1049, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=leupold+vx-5hd", inStock: true, logo: "BPS" },
+      { name: "MidwayUSA", price: 1079, url: "https://www.midwayusa.com/find?userSearchTerm=leupold+vx-5hd+3-15x44", inStock: true, logo: "MID" },
+      { name: "EuroOptic", price: 1099, url: "https://www.eurooptic.com/Search.aspx?term=leupold+vx-5hd+3-15x44", inStock: false, logo: "EUR" },
     ],
     specs: {
       Magnification: "3-15x",
@@ -149,10 +149,10 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 439 },
     ],
     retailers: [
-      { name: "Sitka Gear", price: 439, url: "#", inStock: true, logo: "STK" },
-      { name: "Cabela's", price: 469, url: "#", inStock: true, logo: "CAB" },
-      { name: "Bass Pro Shops", price: 479, url: "#", inStock: false, logo: "BPS" },
-      { name: "MidwayUSA", price: 499, url: "#", inStock: true, logo: "MID" },
+      { name: "Sitka Gear", price: 439, url: "https://www.sitkagear.com/search?q=kelvin+aerolite+jacket", inStock: true, logo: "STK" },
+      { name: "Cabela's", price: 469, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=sitka+kelvin+aerolite+jacket", inStock: true, logo: "CAB" },
+      { name: "Bass Pro Shops", price: 479, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=sitka+kelvin+aerolite", inStock: false, logo: "BPS" },
+      { name: "MidwayUSA", price: 499, url: "https://www.midwayusa.com/find?userSearchTerm=sitka+kelvin+aerolite+jacket", inStock: true, logo: "MID" },
     ],
     specs: {
       Insulation: "850-fill goose down",
@@ -189,10 +189,10 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 629 },
     ],
     retailers: [
-      { name: "Kenetrek Direct", price: 629, url: "#", inStock: true, logo: "KNT" },
-      { name: "Cabela's", price: 649, url: "#", inStock: true, logo: "CAB" },
-      { name: "MidwayUSA", price: 669, url: "#", inStock: false, logo: "MID" },
-      { name: "Sportsman's Whs.", price: 699, url: "#", inStock: true, logo: "SWH" },
+      { name: "Kenetrek Direct", price: 629, url: "https://kenetrek.com/collections/mountain-boots", inStock: true, logo: "KNT" },
+      { name: "Cabela's", price: 649, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=kenetrek+mountain+extreme+400", inStock: true, logo: "CAB" },
+      { name: "MidwayUSA", price: 669, url: "https://www.midwayusa.com/find?userSearchTerm=kenetrek+mountain+extreme+400", inStock: false, logo: "MID" },
+      { name: "Sportsman's Whs.", price: 699, url: "https://www.sportsmanswarehouse.com/search?q=kenetrek+mountain+extreme", inStock: true, logo: "SWH" },
     ],
     specs: {
       Insulation: "400g Thinsulate",
@@ -229,10 +229,10 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 499 },
     ],
     retailers: [
-      { name: "Mystery Ranch", price: 499, url: "#", inStock: true, logo: "MYR" },
-      { name: "Cabela's", price: 519, url: "#", inStock: true, logo: "CAB" },
-      { name: "Bass Pro Shops", price: 539, url: "#", inStock: true, logo: "BPS" },
-      { name: "REI", price: 549, url: "#", inStock: false, logo: "REI" },
+      { name: "Mystery Ranch", price: 499, url: "https://www.mysteryranch.com/search?type=product&q=metcalf+50", inStock: true, logo: "MYR" },
+      { name: "Cabela's", price: 519, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=mystery+ranch+metcalf+50", inStock: true, logo: "CAB" },
+      { name: "Bass Pro Shops", price: 539, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=mystery+ranch+metcalf", inStock: true, logo: "BPS" },
+      { name: "REI", price: 549, url: "https://www.rei.com/search?q=mystery+ranch+metcalf+50", inStock: false, logo: "REI" },
     ],
     specs: {
       Volume: "50L",
@@ -269,11 +269,11 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 259 },
     ],
     retailers: [
-      { name: "Vortex Direct", price: 259, url: "#", inStock: true, logo: "VTX" },
-      { name: "Bass Pro Shops", price: 279, url: "#", inStock: true, logo: "BPS" },
-      { name: "Cabela's", price: 289, url: "#", inStock: true, logo: "CAB" },
-      { name: "Amazon", price: 299, url: "#", inStock: true, logo: "AMZ" },
-      { name: "OpticsPlanet", price: 309, url: "#", inStock: true, logo: "OPP" },
+      { name: "Vortex Direct", price: 259, url: "https://vortexoptics.com/binoculars/diamondback-hd-10x42.html", inStock: true, logo: "VTX" },
+      { name: "Bass Pro Shops", price: 279, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=vortex+diamondback+hd+10x42", inStock: true, logo: "BPS" },
+      { name: "Cabela's", price: 289, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=vortex+diamondback+hd+10x42", inStock: true, logo: "CAB" },
+      { name: "Amazon", price: 299, url: "https://www.amazon.com/s?k=vortex+diamondback+hd+10x42", inStock: true, logo: "AMZ" },
+      { name: "OpticsPlanet", price: 309, url: "https://www.opticsplanet.com/search?q=vortex+diamondback+hd+10x42", inStock: true, logo: "OPP" },
     ],
     specs: {
       Magnification: "10x",
@@ -310,10 +310,10 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 1149 },
     ],
     retailers: [
-      { name: "Bass Pro Shops", price: 1149, url: "#", inStock: true, logo: "BPS" },
-      { name: "Cabela's", price: 1179, url: "#", inStock: true, logo: "CAB" },
-      { name: "Scheels", price: 1199, url: "#", inStock: false, logo: "SCH" },
-      { name: "Lancaster Archery", price: 1249, url: "#", inStock: true, logo: "LAN" },
+      { name: "Bass Pro Shops", price: 1149, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=mathews+phase+4+33", inStock: true, logo: "BPS" },
+      { name: "Cabela's", price: 1179, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=mathews+phase+4+bow", inStock: true, logo: "CAB" },
+      { name: "Scheels", price: 1199, url: "https://www.scheels.com/search?q=mathews+phase+4+33", inStock: false, logo: "SCH" },
+      { name: "Lancaster Archery", price: 1249, url: "https://www.lancasterarchery.com/catalogsearch/result/?q=mathews+phase+4+33", inStock: true, logo: "LAN" },
     ],
     specs: {
       "Axle-to-Axle": '33"',
@@ -350,9 +350,9 @@ export const GEAR_ITEMS: GearItem[] = [
       { date: "2026-04-01", price: 149 },
     ],
     retailers: [
-      { name: "KUIU Direct", price: 149, url: "#", inStock: true, logo: "KUI" },
-      { name: "Cabela's", price: 169, url: "#", inStock: true, logo: "CAB" },
-      { name: "Bass Pro Shops", price: 179, url: "#", inStock: false, logo: "BPS" },
+      { name: "KUIU Direct", price: 149, url: "https://www.kuiu.com/search?type=product&q=attack+pant", inStock: true, logo: "KUI" },
+      { name: "Cabela's", price: 169, url: "https://www.cabelas.com/shop/SearchDisplay?searchTerm=kuiu+attack+pant", inStock: true, logo: "CAB" },
+      { name: "Bass Pro Shops", price: 179, url: "https://www.basspro.com/shop/SearchDisplay?searchTerm=kuiu+attack+pant", inStock: false, logo: "BPS" },
     ],
     specs: {
       Material: "Stretch-woven nylon",
